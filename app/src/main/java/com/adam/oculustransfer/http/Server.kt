@@ -1,5 +1,8 @@
 package com.adam.oculustransfer.http
 
+// Base documentation: https://ktor.io/docs/welcome.html
+// Interactive website documentation: https://ktor.io/docs/creating-interactive-website.html
+// Routes documentation: https://ktor.io/docs/routing-in-ktor.html#nested_routes
 
 import io.ktor.application.*
 import io.ktor.features.*
