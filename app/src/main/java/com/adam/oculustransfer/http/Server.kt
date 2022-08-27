@@ -18,6 +18,13 @@ fun startServer(){
             get("/") {
                 call.respond(mapOf("message" to "Hello world"))
             }
+
+            // Testing variable routes.
+            get(path="/{text}"){
+                val inputText = call.parameters["text"]!!
+                call.respondText { inputText }
+            }
+            // More routes go here...
         }
     }.start(wait = false)
 }
