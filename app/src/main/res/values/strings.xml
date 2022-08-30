@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Oculus Transfer</string>
+    <string name="welcome_message">Transfer files wirelessly from your Oculus (or any Android device running Oreo+) to any other device on your network with a web browser!</string>
+    <string name="ip_label">IP Address:</string>
+    <string name="status_label">Status:</string>
 </resources>
