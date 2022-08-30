@@ -12,7 +12,7 @@ import io.ktor.routing.*
 import io.ktor.server.engine.*
 import io.ktor.server.netty.*
 
-fun startServer(){
+fun startServer() {
     embeddedServer(Netty, 8080) {
         install(ContentNegotiation) {
             gson {}
@@ -23,7 +23,7 @@ fun startServer(){
             }
 
             // Testing variable routes.
-            get(path="/{text}"){
+            get(path = "/{text}") {
                 val inputText = call.parameters["text"]!!
                 call.respondText { inputText }
             }
