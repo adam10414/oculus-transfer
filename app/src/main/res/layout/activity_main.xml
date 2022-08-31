@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="lan_info"
             type="com.adam.oculustransfer.laninfo.LANinfo" />
@@ -80,9 +80,9 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
             android:text="@{lan_info.ipv4Addresses[0].toString()}"
-            app:layout_constraintTop_toTopOf="@+id/ip_label"
             app:layout_constraintStart_toEndOf="@+id/ip_label"
-            tools:text="255.255.255.255"/>
+            app:layout_constraintTop_toTopOf="@+id/ip_label"
+            tools:text="255.255.255.255" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

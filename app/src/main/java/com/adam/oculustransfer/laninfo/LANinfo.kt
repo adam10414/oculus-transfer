@@ -33,7 +33,8 @@ class LANinfo() : ViewModel() {
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
 
-        val linkAddys = connectivityManager?.getLinkProperties(connectivityManager.activeNetwork)?.linkAddresses as MutableList<LinkAddress>
+        val linkAddys =
+            connectivityManager?.getLinkProperties(connectivityManager.activeNetwork)?.linkAddresses as MutableList<LinkAddress>
         _linkAddresses.postValue(linkAddys)
 
         return _linkAddresses.value as MutableList<LinkAddress>

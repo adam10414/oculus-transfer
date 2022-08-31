@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
 
         val binding: ActivityMainBinding = DataBindingUtil.setContentView(
-            this, R.layout.activity_main)
+            this, R.layout.activity_main
+        )
 
         val lanInfo = LANinfo()
         val linkAddresses = lanInfo.getLinkAddresses(this)
