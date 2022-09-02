@@ -3,11 +3,13 @@ package com.adam.oculustransfer.laninfo
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.LinkAddress
+import android.os.Build.VERSION_CODES.P
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.net.Inet4Address
+import kotlin.reflect.typeOf
 
 
 // A class to collect necessary LAN information to support clients.
@@ -23,8 +25,8 @@ class LANinfo() : ViewModel() {
         get() = _ipv4Addresses
 
     init {
-        _linkAddresses.postValue(mutableListOf())
-        _ipv4Addresses.postValue(mutableListOf())
+        _linkAddresses.value = mutableListOf()
+        _ipv4Addresses.value = mutableListOf()
 
     }
 
@@ -35,7 +37,7 @@ class LANinfo() : ViewModel() {
 
         val linkAddys =
             connectivityManager?.getLinkProperties(connectivityManager.activeNetwork)?.linkAddresses as MutableList<LinkAddress>
-        _linkAddresses.postValue(linkAddys)
+        _linkAddresses.value = linkAddys
 
         return _linkAddresses.value as MutableList<LinkAddress>
     }
@@ -44,6 +46,7 @@ class LANinfo() : ViewModel() {
     fun getIPv4Addresses(linkAddresses: MutableList<LinkAddress>): MutableList<String> {
 
         return if (linkAddresses != null) {
+
             for (address in linkAddresses) {
                 val isV4: Inet4Address? = address.address as? Inet4Address
 
