@@ -3,13 +3,10 @@ package com.adam.oculustransfer.laninfo
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.LinkAddress
-import android.os.Build.VERSION_CODES.P
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.net.Inet4Address
-import kotlin.reflect.typeOf
 
 
 // A class to collect necessary LAN information to support clients.

@@ -90,9 +90,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
             android:text="Look at me, I'm  a button"
-            app:layout_constraintTop_toBottomOf="@+id/ip_values"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/ip_values" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
